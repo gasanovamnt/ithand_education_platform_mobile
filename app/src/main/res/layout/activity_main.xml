@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="IThand Education"
+        android:text="IThand Educationn"
         android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@id/editTextLogin"
         app:layout_constraintTop_toTopOf="parent"
