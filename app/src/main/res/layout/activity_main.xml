@@ -13,9 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="IThand Education"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toTopOf="@id/editTextLogin"
+        android:text="EDTech"
+        android:textSize="58sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextLogin"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
@@ -25,15 +25,25 @@
         android:layout_height="wrap_content"
         android:hint="@string/enter_login"
         app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLogo"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
         android:hint="@string/enter_password"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="@id/buttonLogin"
         app:layout_constraintTop_toBottomOf="@+id/editTextLogin" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:background="@color/light_blue"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>
