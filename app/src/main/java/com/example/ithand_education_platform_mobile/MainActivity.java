@@ -1,10 +1,12 @@
 package com.example.ithand_education_platform_mobile;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextLogin;
     private EditText editTextPassword;
     private Button buttonLogin;
+    private TextView forgotPasswordText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -29,6 +32,13 @@ public class MainActivity extends AppCompatActivity {
         initViews();
         // Получаем экземпляр API
         ApiService apiService = RetrofitClient.getClient().create(ApiService.class);
+        forgotPasswordText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = ResetPasswordActivity.newIntent(MainActivity.this);
+                startActivity(intent);
+            }
+        });
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,5 +97,6 @@ public class MainActivity extends AppCompatActivity {
         editTextLogin = findViewById(R.id.editTextLogin);
         editTextPassword = findViewById(R.id.editTextPassword);
         buttonLogin = findViewById(R.id.buttonLogin);
+        forgotPasswordText = findViewById(R.id.forgotPasswordText);
     }
 }
